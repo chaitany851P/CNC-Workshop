@@ -103,7 +103,19 @@ body {
     text-align: center;
     padding-top: 80px;
 }
-    .expert-cards {
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('inaugartion.webp') center/cover;
+    background-size: cover; /* Ensure the image covers the entire section */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text);
+    text-align: center;
+    padding-top: 80px;
+}/* Enhanced Expert Cards */
+.expert-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
@@ -234,30 +246,12 @@ body {
 .section-padding {
     padding: 80px 0;
 }
-.card-icon {
-    text-align: center;          /* Center horizontally */
-    line-height: 100px;         /* Set line height to match the height for vertical centering */
-    height: 100px;               /* Set a height for vertical centering */
-    width: 100px;                /* Set a width for horizontal centering */
-}
+
 .section-header {
     text-align: center;
     margin-bottom: 40px;
 }
-.pricing-card {
-    padding: 10px; /* Initial padding */
-    transition: padding 0.3s ease, transform 0.3s ease; /* Smooth transition for padding and transform */
-}
 
-.pricing-card:hover {
-    padding: 20px; /* Increased padding on hover */
-    transform: scale(1.05); /* Slightly scale up the card on hover */
-}
-
-/* Optional: Add a delay for the hover effect to return to normal */
-.pricing-card {
-    transition: padding 0.3s ease 0.1s, transform 0.3s ease 0.1s; /* Add a delay for the transition */
-}
 .section-header h3 {
     font-size: 2rem;
     color: var(--primary-color);
@@ -365,7 +359,6 @@ body {
     gap: 30px;
 }
 
-
 .info-card {
     background: #ffffff;
     border-radius: 15px;
@@ -387,7 +380,6 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    text-align: center;
 }
 .no-flip:hover {
     transform: none; /* Prevent any transform on hover */
@@ -395,7 +387,16 @@ body {
 .sz{
     padding: 10px;
 }
-
+.card-icon2 {
+    width: 10%;
+    height: 60px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 .card-icon i {
     color: white;
     font-size: 24px;
@@ -1663,4 +1664,97 @@ body {
 /* Add smooth transition for all elements */
 * {
     transition: all 0.3s ease;
+}
+.card {
+    transition: none; /* Disable transition effects */
+    transform: none; /* Remove any transform effects */
+}
+.card.no-flip:hover {
+    transform: none; /* Prevent any transform on hover */
+}
+
+.card {
+    max-width: 400px; /* Set a maximum width for the card */
+    width: 100%; /* Allow the card to be responsive */
+    height: auto; /* Allow the height to adjust based on content */
+    padding: 15px; /* Adjust padding inside the card */
+    margin: 10px auto; /* Center the card and add some margin */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    background-color: #fff; /* Set a background color */
+    text-align: center; /* Center the text */
+}
+
+.card-img-top {
+    max-width: 100%; /* Ensure the image does not exceed the card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners to the image */
+}
+
+.card-text {
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.info-cards {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+    gap: 10px; /* Add space between cards */
+}
+
+.card {
+    width: 18rem; /* Set the width of the card */
+    margin: 10px; /* Optional: Add margin around each card */
+}
+.info-cards {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+    gap: 10px; /* Add space between cards */
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.card {
+    flex: 1 1 calc(33.33% - 10px); /* Allow three cards in a row with space */
+    max-width: 350px; /* Optional: Set a maximum width for each card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    background-color: #fff; /* Set a background color */
+}
+
+.card-img-top {
+    max-width: 100%; /* Ensure the image does not exceed the card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners to the image */
+}
+.card-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+.card {
+    flex: 1 1 calc(33.33% - 20px); 
+    padding: 20px; 
+    box-sizing: border-box; 
+    background: rgb(255, 255, 255); 
+    border-radius: 5px; 
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 calc(100% - 20px); 
+    }
+}
+.card-img-top {
+    height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area */
+    width: 100%; /* Make sure the image takes the full width of the card */
 }

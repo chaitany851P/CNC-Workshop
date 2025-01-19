@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Get the navbar element
+const navbar = document.getElementById('navbar');
+
+// Add an event listener to toggle the class when the navbar is expanded
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    navbar.classList.toggle('show', navbar.classList.contains('show'));
+});
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
